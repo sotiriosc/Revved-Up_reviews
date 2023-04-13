@@ -1,5 +1,5 @@
 {{! searchResults.handlebars }}
-{{! The layout file is used as a template and the contents of this file will be injected into the {{{body}}} placeholder. }}
+{{! The layout file is used as a template and the contents of this file will be injected into the {{{body}}
 {{! Make sure to include this file in the views folder. }}
 
 
@@ -29,10 +29,10 @@
     <div class="container">
       <h2>Search Results</h2>
       {{#if searchResult.length}}
-        <ul>
+        
           {{#each searchResult}}
-            <li>
-             <div class="flex-col gap-4 mx-6 text rounded-lg p-6 max-[426px]:m-1 max-[426px]:p-2 carReviewBoxCont bg-slate-200">
+            
+    <div class="flex-col gap-4 mx-6 text rounded-lg p-6 max-[426px]:m-1 max-[426px]:p-2 carReviewBoxCont bg-slate-200 ">
     <h2 class="text-2xl text-center py-2 rounded-lg font-semibold carReviewTitle bg-[rgb(186,213,238)]">{{title}}</h2>
   <div class="flex flex-row"><p>Make: <b>{{carmake}}</b>  Model: <b>{{carmodel}}</b></p></div>
     <p class="text-xl font-serif" id="carReview">{{carReview}}
@@ -47,9 +47,9 @@
       {{format_date date_reviewcreated}} 
 </p>
   </div>
-            </li>
+            
           {{/each}}
-        </ul>
+        
       {{else}}
         <p>No results found.</p>
       {{/if}}

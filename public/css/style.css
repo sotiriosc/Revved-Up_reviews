@@ -137,3 +137,25 @@ a:hover {
 #carReview{
   margin-top: 10px;
 }
+
+.menu-open {
+  overflow: hidden;
+}
+
+.animated-bg {
+  background: linear-gradient(270deg, #ee9519, #2591b5, #ec0c0c);
+  background-size: 200% 200%;
+  animation: animatedBackground 30s ease-in-out infinite;
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

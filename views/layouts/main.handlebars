@@ -12,9 +12,26 @@
     overflow: hidden;
   }
 </style>
+<style>
+  .menu-open {
+    overflow: hidden;
+  }
+
+  @keyframes animatedBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
 </head>
 
-<body class="bg-[#f5f3f3] flex flex-col min-h-screen">
+<body class="bg-[#f5f3f3] flex flex-col min-h-screen animated-bg">
   
   <nav class="bg-slate-600">
   <div class="container mx-auto px-6 py-4">
@@ -161,7 +178,7 @@
 </body>
 
 </html>
-the content doesn't fill the entire viewport height.
+
 
 
 

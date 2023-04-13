@@ -16,6 +16,7 @@ const loginFormHandler = async (event) => {
       alert("Success")
     } else {
       alert(response.statusText);
+      
     }
   }
 };

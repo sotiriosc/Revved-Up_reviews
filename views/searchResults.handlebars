@@ -25,34 +25,28 @@
  --}}
 
 
-  
-    <div class="container">
-      <h2>Search Results</h2>
-      {{#if searchResult.length}}
-        
-          {{#each searchResult}}
-            
-    <div class="flex-col gap-4 mx-6 text rounded-lg p-6 max-[426px]:m-1 max-[426px]:p-2 carReviewBoxCont bg-slate-200 ">
-    <h2 class="text-2xl text-center py-2 rounded-lg font-semibold carReviewTitle bg-[rgb(186,213,238)]">{{title}}</h2>
-  <div class="flex flex-row"><p>Make: <b>{{carmake}}</b>  Model: <b>{{carmodel}}</b></p></div>
-    <p class="text-xl font-serif" id="carReview">{{carReview}}
-    </p>
-  </div>
-
-   <div class="flex flex-col sm:flex-row justify-around " id="images-container"></div>
-    <p class="text-right italic carReviewCreate">-Created by
-  {{creator.username}}
-  on
-  {{format_time date_reviewcreated}},
-      {{format_date date_reviewcreated}} 
-</p>
-  </div>
-            
-          {{/each}}
-        
-      {{else}}
-        <p>No results found.</p>
-      {{/if}}
-    </div>
-  
+  <div class="container">
+  <h2>Search Results</h2>
+  {{#if searchResult.length}}
+    {{#each searchResult as |carReview|}}
+      <div class="flex flex-col w-full max-[426px]:mt-5 max-[426px]:mb-1">
+        <div class="flex flex-col items-center px-6 max-[426px]:px-4">
+          <div class="px-4 w-[70%] max-[426px]:w-full bg-white mx-4 my-2 shadow-sm justify-between py-2 rounded-lg flex flex-col carReviewBox">
+            <div class="font-semibold flex flex-row max-[426px]:flex-col max-[426px]:gap-2 gap-1 justify-between headerRow">
+              <a class="carReviewTitle" href="/carReview/{{carReview.id}}">{{carReview.title}}</a>
+              <p>Make: {{carReview.carmake}};&nbsp;&nbsp; Model: {{carReview.carmodel}}</p>
+            </div>
+            <div class="border border-dashed mt-2"></div>
+            <div class="mt-2 carReviewDesc">
+              <p class="carReviewDescMain">Review:<br>{{truncateContent carReview.carReview 20}}</p>
+              <p class="carReviewCreate text-right italic">Created by {{carReview.creator.username}} on {{format_date carReview.date_reviewcreated}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <p>No results found.</p>
+  {{/if}}
+</div>
 

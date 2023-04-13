@@ -166,3 +166,12 @@ a:hover {
   justify-self: center;
   flex-basis: auto;
 }
+
+.car-review-container {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-review-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.2);
+}

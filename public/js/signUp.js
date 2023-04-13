@@ -13,6 +13,7 @@ const signupFormHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace('/dashboard');
+      alert("Account Successfully Created")
     } else {
       alert(response.statusText);
     }

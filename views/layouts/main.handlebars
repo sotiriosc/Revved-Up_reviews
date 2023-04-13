@@ -1,14 +1,15 @@
+<!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Revved Up Reviews</title>
-    <link rel="stylesheet" href="/css/style.css" /> 
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revved Up Reviews</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-  <body class="bg-[#f5f3f3] flex-col min-h-screen">
+<body class="bg-[#f5f3f3] flex flex-col min-h-screen">
   
 
       <nav
@@ -76,20 +77,18 @@
         </div>
       </nav>
 
-
-<form class="flex flex-box justify-center large-input" action="/search" method="get">
-<label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+<div class="flex-grow">
+  <form class="flex flex-box justify-center large-input" action="/search" method="get">
+  <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
   <input class="block w-half p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="text" name="q" placeholder="Search reviews...">
-  <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-  Search
-</button>
+  <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
 </form>
 
 
-      <main class="flex flex-col flex-grow">
-        {{{body}}}
-      </main>
-    {{!-- </div> --}}
+     <main class="flex flex-col">
+      {{{body}}}
+    </main>
+  </div>
     
 
 
@@ -98,8 +97,16 @@
       <script src="/js/logout.js"></script>
     {{/if}}
 
-     <footer class="w-full py-6 text-center self-baseline bg-slate-800 text-white mt-4 max-[426px]:mt-0 bottom-0">
-        Made with ❤ by TEAM-4
-   </footer>
-  </body>
+    <footer class="w-full py-6 text-center bg-slate-800 text-white">
+    Made with ❤ by TEAM-4
+  </footer>
+</body>
+
 </html>
+
+
+
+
+
+
+

@@ -24,6 +24,13 @@ body {
   border-style: solid;
 }
 
+.comments-word {
+  background-color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+
 /* .carReviewTitle {
   text-decoration: initial;
   color: rgb(238, 104, 55);
